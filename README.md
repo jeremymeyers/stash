@@ -38,7 +38,7 @@ The `ffmpeg(.exe)` and `ffprobe(.exe)` files should be placed in `~/.stash` on m
 
 ## CLI
 
-Stash provides some command line options.  See what is currently available by running `stash --help`.
+Stash runs as a command-line interface and local web server. You connect to Stash via a web browser while the executable is running.  Stash provides some command line options.  See what is currently available by running `stash --help`.
 
 For example, to run stash locally on port 80 run it like this (OSX / Linux) `stash --host 127.0.0.1 --port 80`
 
@@ -58,9 +58,29 @@ Once you have a certificate and key file name them `stash.crt` and `stash.key` a
 
 Try running `chmod u+x stash-osx` or `chmod u+x stash-linux` to make the file executable.
 
+> How do I add more data sources/scrapers?
+
+You can download many more scrapers from the [CommunityScrapers Project](https://github.com/stashapp/CommunityScrapers)
+
+> Where can I find plugins?
+You can download (and develop) plugins from our [Wiki](https://github.com/stashapp/stash/wiki/Plugins)
+
+> How do I use Stash-Box?
+[Stash-Box](https://github.com/stashapp/stash-box) is our in-progress scene and performer database.  You can enable it as a scraper by:
+1. Login to https://stashdb.org/ as test/1234test
+2. Click "test" at the top (next to Logged in as)
+3. Copy the API key
+4. Go to the settings in Stash (http://localhost:9999/settings by default), click Configuration on the left side and scroll down to Stash-box integration
+5. Paste the API key, enter stashdb.org for Name, and enter https://stashdb.org/graphql as the endpoint
+
+> I have a feature I'd like to see / design change implented
+
+The front-end UI is frozen other than minor changes at this time, pending a rewrite.  You are welcome to submit a feature requests, though we are aware of many of the common requests.  You can look at [Our UI roadmap discussion](https://github.com/stashapp/stash/projects/4) and [Front-end UI discussion](https://github.com/stashapp/stash/issues/108) here.  
+
 > I have a question not answered here.
 
-Join the [Discord server](https://discord.gg/2TsNFKt).
+We have a very active [Discord server](https://discord.gg/2TsNFKt). The devs are often there and respond to bugs and requests.
+
 
 # Development
 
