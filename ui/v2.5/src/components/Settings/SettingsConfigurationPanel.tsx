@@ -324,10 +324,10 @@ export const SettingsConfigurationPanel: React.FC = () => {
 
   return (
     <>
-      <h4>Library</h4>
+      <h4>My Library</h4>
       <Form.Group>
         <Form.Group id="stashes">
-          <h6>Stashes</h6>
+          <h6>Folders To Scan</h6>
           <StashConfiguration
             stashes={stashes}
             setStashes={(s) => setStashes(s)}
@@ -336,7 +336,7 @@ export const SettingsConfigurationPanel: React.FC = () => {
             Directory locations to your content
           </Form.Text>
         </Form.Group>
-
+      <h4>Data Files<h4>
         <Form.Group id="database-path">
           <h6>Database Path</h6>
           <Form.Control
@@ -379,9 +379,9 @@ export const SettingsConfigurationPanel: React.FC = () => {
             Directory location of the cache
           </Form.Text>
         </Form.Group>
-
+        <h4>Library File Types</h4>
         <Form.Group id="video-extensions">
-          <h6>Video Extensions</h6>
+          <h6>Included Video Extensions</h6>
           <Form.Control
             className="col col-sm-6 text-input"
             defaultValue={videoExtensions}
@@ -396,7 +396,7 @@ export const SettingsConfigurationPanel: React.FC = () => {
         </Form.Group>
 
         <Form.Group id="image-extensions">
-          <h6>Image Extensions</h6>
+          <h6>Included Image Extensions</h6>
           <Form.Control
             className="col col-sm-6 text-input"
             defaultValue={imageExtensions}
@@ -411,7 +411,7 @@ export const SettingsConfigurationPanel: React.FC = () => {
         </Form.Group>
 
         <Form.Group id="gallery-extensions">
-          <h6>Gallery zip Extensions</h6>
+          <h6>Included Compressed Gallery Extensions</h6>
           <Form.Control
             className="col col-sm-6 text-input"
             defaultValue={galleryExtensions}
@@ -429,7 +429,7 @@ export const SettingsConfigurationPanel: React.FC = () => {
           <h6>Excluded Video Patterns</h6>
           <ExclusionPatterns excludes={excludes} setExcludes={setExcludes} />
           <Form.Text className="text-muted">
-            Regexps of video files/paths to exclude from Scan and add to Clean
+            <a href="https://itsallbinary.com/simply-regex/regex-builder-tool">Regexps</a> of video files/paths to exclude from Scan and add to Clean
             <a
               href="https://github.com/stashapp/stash/wiki/Exclude-file-configuration"
               rel="noopener noreferrer"
@@ -477,7 +477,7 @@ export const SettingsConfigurationPanel: React.FC = () => {
       <hr />
 
       <Form.Group>
-        <h4>Hashing</h4>
+        <h4>Content Identification</h4>
         <Form.Group>
           <Form.Check
             checked={calculateMD5}
@@ -523,9 +523,9 @@ export const SettingsConfigurationPanel: React.FC = () => {
       <hr />
 
       <Form.Group>
-        <h4>Video</h4>
+        <h4>Transcoding</h4>
         <Form.Group id="transcode-size">
-          <h6>Maximum transcode size</h6>
+          <h6>Maximum transcode resolution</h6>
           <Form.Control
             className="w-auto input-control"
             as="select"
@@ -545,7 +545,7 @@ export const SettingsConfigurationPanel: React.FC = () => {
           </Form.Text>
         </Form.Group>
         <Form.Group id="streaming-transcode-size">
-          <h6>Maximum streaming transcode size</h6>
+          <h6>Maximum transcode size - Streaming</h6>
           <Form.Control
             className="w-auto input-control"
             as="select"
@@ -728,7 +728,7 @@ export const SettingsConfigurationPanel: React.FC = () => {
       <hr />
 
       <Form.Group>
-        <h4>Authentication</h4>
+        <h4>Logins</h4>
         <Form.Group id="username">
           <h6>Username</h6>
           <Form.Control
